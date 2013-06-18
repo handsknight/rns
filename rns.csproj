@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{377535D3-BCF2-4506-B067-769C3F29CEFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>rns</RootNamespace>
+    <AssemblyName>rns</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BitmapToRegion.cs" />
+    <Compile Include="candidateselection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="candidateselection.Designer.cs">
+      <DependentUpon>candidateselection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datamethods.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcandidate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcandidate.Designer.cs">
+      <DependentUpon>frmcandidate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmclientrequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmclientrequest.Designer.cs">
+      <DependentUpon>frmclientrequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdatabase2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdatabase2.Designer.cs">
+      <DependentUpon>frmdatabase2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmdload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmdload.Designer.cs">
+      <DependentUpon>frmdload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmreport.Designer.cs">
+      <DependentUpon>frmreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsearch.Designer.cs">
+      <DependentUpon>frmsearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmusersetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmusersetup.Designer.cs">
+      <DependentUpon>frmusersetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="rnsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rnsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_form_candidateselection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_form_candidateselection.Designer.cs">
+      <DependentUpon>rpt_form_candidateselection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_form_clientrequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_form_clientrequest.Designer.cs">
+      <DependentUpon>rpt_form_clientrequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_form_database2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_form_database2.Designer.cs">
+      <DependentUpon>rpt_form_database2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="splashscreen.Designer.cs">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="candidateselection.resx">
+      <DependentUpon>candidateselection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcandidate.resx">
+      <DependentUpon>frmcandidate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmclientrequest.resx">
+      <DependentUpon>frmclientrequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdatabase2.resx">
+      <DependentUpon>frmdatabase2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmdload.resx">
+      <DependentUpon>frmdload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmreport.resx">
+      <DependentUpon>frmreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsearch.resx">
+      <DependentUpon>frmsearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmusersetup.resx">
+      <DependentUpon>frmusersetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="rptdatabase2.rdlc" />
+    <EmbeddedResource Include="rptshortlisted.rdlc" />
+    <EmbeddedResource Include="rptclientrequest.rdlc" />
+    <EmbeddedResource Include="rpt_form_candidateselection.resx">
+      <DependentUpon>rpt_form_candidateselection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_form_clientrequest.resx">
+      <DependentUpon>rpt_form_clientrequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_form_database2.resx">
+      <DependentUpon>rpt_form_database2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="splashscreen.resx">
+      <DependentUpon>splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dtolocal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dtolocal1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cand1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutus1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_new2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\briefcase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bkgd-checkered.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f.ap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flower1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\status_Answered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icsl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\animated.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puppy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon6780.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drafts image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ij.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client2a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow2a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download_Symbol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_b.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_b1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon344.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white_shape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\client.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rns.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutus21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usersetup1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_ba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hte1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\globe2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-shadow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+    <Folder Include="Reports\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\benefits-destination.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\benefits-wizard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon3441.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WZUNDO.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WZSAVE - Copy.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rnsDataSet.xsc">
+      <DependentUpon>rnsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rnsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rnsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rnsDataSet.xss">
+      <DependentUpon>rnsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="save.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="undo.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="WZSAVE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="clearscreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\rns_icon.ico" />
+    <Content Include="images\search.ico" />
+    <None Include="Resources\report2.png" />
+    <None Include="Resources\reports.png" />
+    <None Include="Resources\benefits-plugin.png" />
+    <None Include="Resources\hand2.png" />
+    <None Include="Resources\arrow.jpg" />
+    <None Include="Resources\clock.png" />
+    <None Include="Resources\browse1.png" />
+    <None Include="Resources\browse.png" />
+    <None Include="Resources\rns21.png" />
+    <None Include="Resources\wizard.png" />
+    <None Include="Resources\arrow_red.png" />
+    <None Include="Resources\rns2.png" />
+    <None Include="Resources\rns3.png" />
+    <None Include="Resources\rns1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
